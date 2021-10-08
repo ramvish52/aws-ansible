@@ -1,0 +1,10 @@
+- hosts: localhost
+  tasks:
+    - ec2_vol:
+        aws_access_key: AKIAUAQNJGIFZRUJF5G6
+        aws_secret_key: 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
+        id: vol-072b6187c0182fbab
+        state: absent
+        zone: ap-south-1b
+        region: ap-south-1
+

@@ -1,0 +1,28 @@
+---
+# vars file for vpc-role
+aws_access_key: "AKIAUAQNJGIFZRUJF5G6"
+aws_secret_key: "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"
+
+# VPC
+region: ap-south-1
+vpc_cidr: 10.0.0.0/16
+vpc_name: "Production-VPC"
+
+# Subnet
+subnet_name: "Production-Subnet"
+subnet_cidr: 10.0.1.0/24
+
+# Internet Gateway -  IGW
+igw_name: "Production_IGW"
+
+# Route table name
+route_name: "Production-RT"
+
+# Security Group
+securitygroup_name: "Production-SG"
+
+ec2_tag: "Production-Machine"
+
+#key storage location
+ec2_key_directory: "/home/ec2-user"
+keypair_name: "production-key"

@@ -1,0 +1,17 @@
+- hosts: localhost
+  vars:
+    ids:
+      - i-00994ef4b95af7e5a
+      - i-06236861643af571d
+      - i-0a70f9f6d84e285fe  
+  tasks:
+    - ec2:
+        aws_access_key: AKIAUAQNJGIFZRUJF5G6
+        aws_secret_key: 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
+        region: ap-south-1
+        vpc_subnet_id: subnet-ac18ebc7
+        assign_public_ip: yes
+        wait: true
+        instance_id: "{{ ids }}"
+        state: absent
+

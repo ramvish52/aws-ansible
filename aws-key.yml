@@ -1,0 +1,20 @@
+- hosts: localhost
+  tasks:
+    - name: create a new ec2 key pair, returns generated private key
+      ec2_key:
+        aws_access_key: "AKIAUAQNJGIFZRUJF5G6"
+        aws_secret_key: "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"
+        name: production-key
+        region: ap-south-1
+      register: keypair
+      tags:
+        - production-key
+
+    - name: Copy EC2 key Pair private key locally
+      copy: 
+        content: "{{ keypair.key.private_key }}" 
+        dest: /home/ec2-user/production-key.pem
+      when: keypair.changed == true
+      tags:
+        - prodcution-key
+

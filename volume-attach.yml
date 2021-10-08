@@ -1,0 +1,12 @@
+- hosts: localhost
+  tasks:
+    - ec2_vol:
+        aws_access_key: AKIAUAQNJGIFZRUJF5G6
+        aws_secret_key: 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
+        instance: i-000c6502f7a2d159d
+        id: vol-072b6187c0182fbab
+        device_name: /dev/xvdf
+        zone: ap-south-1b
+        region: ap-south-1
+        delete_on_termination: yes
+

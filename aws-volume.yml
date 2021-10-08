@@ -1,0 +1,15 @@
+- hosts: localhost
+  tasks:
+    - ec2_vol:
+        aws_access_key: AKIAUAQNJGIFZRUJF5G6
+        aws_secret_key: 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
+        volume_size: 10
+        device_name: /dev/xvdf
+        volume_type: io1
+        iops: 100
+        zone: ap-south-1b
+        region: ap-south-1
+        tags:
+          Name: Prod-Volume
+
+
